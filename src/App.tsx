@@ -1,7 +1,9 @@
+import ReferralBuilder from './pages/referral-builder/ReferralBuilder';
+
 function App() {
   return (
-    <div className="App">
-      Test
+    <div className="app">
+      <ReferralBuilder />
     </div>
   );
 }

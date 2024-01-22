@@ -1,0 +1,20 @@
+.button {
+  border: 1px solid $lightgrey;
+  border-radius: 4px;
+  box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.50);
+  cursor: pointer;
+  font-weight: bold;
+  padding: 8px;
+  text-transform: uppercase;
+
+  &.default {
+    background: $white;
+    color: $grey;
+  }
+
+  &.primary {
+    background: $green;
+    border-color: $green;
+    color: $white;
+  }
+}
