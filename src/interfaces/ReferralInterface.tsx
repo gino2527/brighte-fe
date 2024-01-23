@@ -1,4 +1,5 @@
 interface ReferralInterface {
+  avatar: string;
   country: string;
   email: string;
   given_name: string;

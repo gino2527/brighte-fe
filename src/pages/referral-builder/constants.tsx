@@ -48,3 +48,5 @@ export const ADDRESS_INPUTS: InputObject[] = [
     name: 'country',
   },
 ];
+
+export const MAX_AVATAR_SIZE = 1_024 * 1_000 * 2;

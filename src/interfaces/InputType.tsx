@@ -1,3 +1,3 @@
-type InputType = 'email' | 'tel' | 'text';
+type InputType = 'file' | 'email' | 'tel' | 'text';
 
 export default InputType;

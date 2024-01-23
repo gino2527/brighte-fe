@@ -15,4 +15,8 @@
     color: $grey;
     padding: 8px;
   }
+
+  &__image-preview {
+    max-width: 25%;
+  }
 }
