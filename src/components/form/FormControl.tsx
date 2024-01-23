@@ -29,8 +29,12 @@ const FormControl: FC<FormControlProps> = ({
       className="form-control__input"
       onChange={onChange}
       name={name}
+      required
       type={type}
       value={value}
+      {...type === 'tel' && {
+        pattern: '[0-9]{4}-[0-9]{3}-[0-9]{3}',
+      }}
     />
   </div>
 );

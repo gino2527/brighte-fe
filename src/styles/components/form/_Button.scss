@@ -12,6 +12,18 @@
     color: $grey;
   }
 
+  &.icon {
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0px;
+
+    svg {
+      height: 16px;
+      width: 16px;
+    }
+  }
+
   &.primary {
     background: $green;
     border-color: $green;

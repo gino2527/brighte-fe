@@ -1,0 +1,21 @@
+.flex-center {
+  align-items: center;
+  display: flex;
+}
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.m-b-16 {
+  margin-bottom: 16px;
+}
+
+.m-l-12 {
+  margin-left: 12px;
+}
+
+.animated--spinning {
+  animation: rotation 1s linear infinite;
+}

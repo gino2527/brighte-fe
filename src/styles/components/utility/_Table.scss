@@ -1,0 +1,33 @@
+@mixin table-border {
+  border-bottom: 1px solid $lightgrey;
+}
+
+.table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+
+  &__header {
+    th {
+      @include table-border();
+      color: $grey;
+      font-weight: bold;
+      overflow: hidden;
+      padding-bottom: 8px;
+      text-align: left;
+      text-overflow: ellipsis;
+      text-transform: uppercase;
+    }
+  }
+
+  &__body {
+    tr td {
+      @include table-border();
+      border-spacing: 0px;
+      color: $grey;
+      overflow: hidden;
+      padding: 12px 6px;
+      text-overflow: ellipsis;
+    }
+  }
+}

@@ -1,5 +1,3 @@
-
-
 // interfaces
 import InputObject from '../../interfaces/InputObject';
 
