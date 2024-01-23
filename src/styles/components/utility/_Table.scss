@@ -30,4 +30,14 @@
       text-overflow: ellipsis;
     }
   }
+
+  &--empty {
+    tbody {
+      tr {
+        td {
+          text-align: center;
+        }
+      }
+    }
+  }
 }

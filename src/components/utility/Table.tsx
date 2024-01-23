@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import { FC, ReactNode } from 'react';
 
 export interface TableHeader {
@@ -19,7 +20,7 @@ const Table: FC<TableProps> = ({
   headers,
   values,
 }) => (
-  <table className="table">
+  <table className={clsx(['table', values.length === 0 && 'table--empty'])}>
     {headers.length > 0 && (
       <thead className="table__header">
         <tr>
@@ -32,17 +33,25 @@ const Table: FC<TableProps> = ({
       </thead>
     )}
     <tbody className="table__body">
-      {values.length > 0 && (
-        values.map((v, vIndex) => (
-          <tr key={`v-${vIndex + 1}`}>
-            {headers.map(({ key, render }) => (
-              <td key={`v-${vIndex + 1}-${key}`}>
-                {render?.(v) ?? v[key]}
-              </td>
-            ))}
+      {values.length > 0
+        ? (
+          values.map((v, vIndex) => (
+            <tr key={`v-${vIndex + 1}`}>
+              {headers.map(({ key, render }) => (
+                <td key={`v-${vIndex + 1}-${key}`}>
+                  {render?.(v) ?? v[key]}
+                </td>
+              ))}
+            </tr>
+          ))
+        )
+        : (
+          <tr>
+            <td colSpan={headers.length}>
+              No data available.
+            </td>
           </tr>
-        ))
-      )}
+        )}
     </tbody>
   </table>
 );
