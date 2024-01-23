@@ -82,7 +82,7 @@ const ReferralBuilder = () => {
           throw err;
         }
       });
-  }, [navigate, referral]);
+  }, [navigate, referral, referralId]);
 
   const handleUploadAvatar = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files;
